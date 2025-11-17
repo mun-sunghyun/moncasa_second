@@ -1,0 +1,8 @@
+/* Tailwind의 base 스타일(Preflight/Normalize)을 주입 */
+@tailwind base;
+
+/* Tailwind의 컴포넌트 클래스(예: 컨테이너)를 주입 */
+@tailwind components;
+
+/* Tailwind의 모든 유틸리티 클래스(가장 중요)를 주입 */
+@tailwind utilities;
