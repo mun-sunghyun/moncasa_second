@@ -1,18 +1,32 @@
 import './App.css'
 import Header from './layout/Header';
-import Footer  from './layout/Footer';
+import Footer from './layout/Footer';
 
 function App() {
 
   return (
     <>
-      <Header/>
-      <main>
-        <section id="minimal" className="section-padding h-[100vh] bg-gray-100 pt-[200px]">
-          <div className="container_1450">미니멀 섹션</div>
+      <Header/>   
+      <main className="pt-[70px]">
+        <section>
+          <div className="background-image1">
+            <img src="/img/Holiday_Season.png" className="img_HolidaySeason"></img>
+            <img src="/img/star.png" className="img_star"></img>
+            <div className="text-wrapper">
+              <p className="title1">따듯한 겨울, 포근한 우리 집</p>
+              <p className="title2">포근한 소파부터 감각적인 테이블, 따뜻한 조명까지,<br/>
+                겨울을 완성하는 감성 가구 컬렉션
+              </p>
+            </div>
+          </div>
         </section>
-        <section id="upcycling" className="section-padding h-[100vh] bg-gray-200">
-          <div className="container_1450">친환경 섹션</div>
+        <section className="background-image2">
+          <img src="/img/santa.png" className="img_santa top-0"></img>
+          <img src="/img/sofa.png" className="img_sofa bottom-0"></img>
+          <div className="text-wrapper">
+              <p className="title1">Sofa</p>
+              <p className="title2">온기가 머무는 자리</p>              
+          </div>
         </section>
         <section id="premium" className="section-padding h-[100vh] bg-gray-300">
           <div className="container_1450">프리미엄 섹션</div>
