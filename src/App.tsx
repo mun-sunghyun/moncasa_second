@@ -69,6 +69,96 @@ function App() {
             </div>
           </div>
         </section>
+        <section className="background-image4">
+          <div className="sofa-wrapper">
+            <div className="product-item">
+              <img src="/img/sofa1.png"></img>
+              <div className="dot-wrapper">
+                <img src="/img/dot_color.png"></img>
+                <img src="/img/dot_PET.png"></img>
+                <img src="/img/dot_FFFFFF.png"></img>
+              </div>
+              <p className="product_words">마이스터 컬렉션 아르베 모듈형<br/>
+                2인 페브릭소파
+              </p>
+              <div className="word-wrapper">
+                <p className="word1">3,210,000원</p>
+                <p className="word2">2,889,000원</p>
+              </div>
+            </div>
+            <div className="product-item">
+              <img src="/img/sofa2.png"></img>
+              <div className="dot-wrapper">
+                <img src="/img/dot_7B706A.png"></img>
+                <img src="/img/dot_FFFFFF.png"></img>
+              </div>
+              <p className="product_words">마이스터 컬렉션 아르베<br/>
+               
+              </p>
+              <div className="word-wrapper">
+                <p className="word1">3,210,000원</p>
+                <p className="word2">2,889,000원</p>
+              </div>
+            </div>
+            <div className="product-item">
+              <img src="/img/sofa3.png"></img>
+              <div className="dot-wrapper">
+                <img src="/img/dot_PET.png"></img>
+                <img src="/img/dot_777255.png"></img>
+                <img src="/img/dot_7B706A.png"></img>
+                <img src="/img/dot_FFFFFF.png"></img>
+              </div>
+              <p className="product_words">아르베 모듈형 2인 페브릭소파<br/>
+                
+              </p>
+              <div className="word-wrapper">
+                <p className="word1">3,210,000원</p>
+                <p className="word2">2,889,000원</p>
+              </div>                
+            </div>
+            <div>
+              <img src="/img/sofa4.png"></img>
+              <div className="dot-wrapper">
+                <img src="/img/dot_color.png"></img>
+                <img src="/img/dot_PET.png"></img>
+                <img src="/img/dot_777255.png"></img>
+                <img src="/img/dot_7B706A.png"></img>
+                <img src="/img/dot_FFFFFF.png"></img>
+              </div>
+              <p className="product_words">마이스터 컬렉션 아르베 모듈형<br/>
+                2인 페브릭소파
+              </p>
+              <div className="word-wrapper">
+                <p className="word1">3,210,000원</p>
+                <p className="word2">2,889,000원</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="background-image5">
+          <div className="photo-wrapper">
+            <div className="event">
+              <p className="word1">
+                포토 리뷰 이벤트 &gt;
+              </p>
+              <p className="word2">
+                리뷰만 작성해도<br/>
+                1000포인트 바로 적립
+              </p>
+            </div>
+            <img src="/img/coin.png" className="coin"></img>
+            <div className="event">
+              <p className="word1">
+                신규가입 혜택 &gt;
+              </p>
+              <p className="word2">
+                30초 간단 가입으로<br/>
+                10만원 즉시 할인 혜택 받기
+              </p>
+            </div>
+            <img src="/img/heartballoon.png" className="heartballoon"></img>       
+          </div>
+        </section>
         {/* ... 나머지 섹션들 ... */}
         <section id="lineup" className="section-padding h-[50vh] bg-gray-400">
           <div className="container_1450">MONCASA 섹션</div>
