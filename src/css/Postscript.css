@@ -1,0 +1,120 @@
+.title-group{
+    margin-top:5%;
+}
+
+.title{
+    font-family: 'Pretendard-Bold';
+    font-size : 50px;
+    margin-left : 8%;
+}
+.icon-group{
+    margin-right:8%;
+    position : relative;
+}
+
+.icons{
+    width: 20px;
+    height: 20px;
+}
+
+.option-btn {
+    border: 1px solid #713131;
+    border-radius: 3rem;
+    width:200px;
+    height:70px;
+    font-family: 'Pretendard-SemiBold';
+    font-size: 20px;
+    display: flex;
+    gap:5%;
+    justify-content: center;
+    align-items: center;
+    color : #713131;
+}
+
+.background{
+    margin-top:3%;
+    background-color: #F6F1EB;
+    height:60px;
+}
+
+.background .title1{
+    font-size: 20px;
+    color:#713131;
+    font-family: 'Pretendard-Medium';
+}
+
+.review_card{
+    position : relative;
+    border-radius: 30px;
+    overflow: hidden;
+    height:500px;
+    margin-top:5%;
+    margin-bottom:20%;
+}
+.review_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 비율 유지 + 영역 채움 */
+}
+
+.review_text{
+    position : absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color:white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.stars{
+    max-width: 100px;
+    height: auto;
+    margin-left : 5%;
+}
+
+.review_card .title1{
+    margin-left : 5%;
+    font-size: 24px;
+    padding-bottom: 1rem;
+}
+.review_card .title2{
+    margin-left : 5%;
+    font-size: 18px;
+    width: 85%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 기존 방식 */
+    line-clamp: 2; /* 신형 표준 fallback */
+    margin-bottom:10%;
+    
+}
+
+.mySwiper .swiper-pagination {
+    top: auto !important;
+    bottom: 0 !important;
+    width: 70%;
+    left : 15%;
+}
+
+.mySwiper .swiper-pagination-progressbar {
+    background: #e0e0e0; /* progressbar 배경 */
+}
+
+.mySwiper .swiper-pagination-progressbar-fill {
+    background: #333; /* 채워지는 progress 색상 */
+}
+
+.santa-hat1{
+    position: absolute;
+    width : 25%;
+    top : -50%;
+    left : 35%;
+}
+.santa-hat2{
+    position: absolute;
+    width : 25%;
+    top : -50%;
+    left : 87%;
+}

@@ -10,10 +10,13 @@ import Table from './layout/Table';
 import Table2 from './layout/Table2';
 import Table3 from './layout/Table3';
 import Table4 from './layout/Table4';
-import Light from './layout/light';
-import Light2 from './layout/light2';
-import Light3 from './layout/light3';
-import Taste from './layout/taste';
+import Light from './layout/Light';
+import Light2 from './layout/Light2';
+import Light3 from './layout/Light3';
+import Taste from './layout/Taste';
+import Postscript from './layout/Postscript';
+import Interior from './layout/Interior';
+import Lineup from './layout/Lineup';
 
 function App() {
 
@@ -34,12 +37,9 @@ function App() {
         <Light2></Light2>
         <Light3></Light3>
         <Taste></Taste>
-
-                                                      
-        {/* ... 나머지 섹션들 ... */}
-        <section id="lineup" className="section-padding h-[50vh] bg-gray-400">
-          <div className="container_1450">MONCASA 섹션</div>
-        </section>
+        <Postscript></Postscript>
+        <Interior></Interior>
+        <Lineup></Lineup>
       </main>
       <Footer/>
     </>
