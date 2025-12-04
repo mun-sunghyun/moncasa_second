@@ -33,7 +33,7 @@
     font-display: swap;
 }
 .background-image1{
-    background-image:url("/img/background1.png");
+    background-image:url("../img/background1.png");
     width: 100vw;
     height: 0;
     padding-top: 141.4%;
@@ -45,7 +45,7 @@
     position: relative;
 }
 .background-image1::after{
-    background-image: url("/img/moncasa_bottom.png");
+    background-image: url("../img/moncasa_bottom.png");
     content:"";
     position: absolute;
     width:100%;

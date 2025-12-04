@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React                                                                             from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,6 +10,14 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 
 import '../css/Postscript.css'
+import hat from '../img/hat.png';
+import review1 from '../img/review1.jpg';
+import review2 from '../img/review2.jpg';
+import review3 from '../img/review3.jpg';
+import review4 from '../img/review4.jpg';
+import review5 from '../img/review5.jpg';
+import review6 from '../img/review6.jpg';
+import star_5 from '../img/star_5.png';
 
 const Postscript:React.FC = () =>{
     return(
@@ -39,12 +47,12 @@ const Postscript:React.FC = () =>{
                         <svg className="icons"><use href="#icon-pencil"></use></svg>
                         후기작성하기
                     </button>
-                    <img src="/img/hat.png" className="santa-hat1"></img>
+                    <img src={hat} className="santa-hat1"></img>
                     <button className="option-btn">
                         <svg className="icons"><use href="#icon-instagram"></use></svg>
                         인스타그램 보기
                     </button>
-                    <img src="/img/hat.png" className="santa-hat2"></img>
+                    <img src={hat} className="santa-hat2"></img>
                 </div>
             </div>
             <div className="background flex justify-center items-center">
@@ -63,9 +71,9 @@ const Postscript:React.FC = () =>{
             >
                 <SwiperSlide>
                     <div className="review_card">
-                        <img src="/img/review4.jpg" className="max-w-full h-auto brightness-75"></img>
+                        <img src={review4} className="max-w-full h-auto brightness-75"></img>
                         <ul className="review_text">
-                            <li><img src="/img/star_5.png" className="stars"></img></li>
+                            <li><img src={star_5} className="stars"></img></li>
                             <li className="title1">친환경이라서 바로 구매했어요!!....</li>
                             <li className="title2">패브릭 소재의 소파를 좋아하는데 피부가 예민해서 가족만 쓰다가 친환경이라고 해서 구매해봤는데 가려움도 없고 너무 좋네요...</li>
                         </ul>
@@ -73,9 +81,9 @@ const Postscript:React.FC = () =>{
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="review_card">
-                        <img src="/img/review2.jpg" className="max-w-full h-auto brightness-75"></img>
+                        <img src={review2} className="max-w-full h-auto brightness-75"></img>
                         <ul className="review_text">
-                            <li><img src="/img/star_5.png" className="stars"></img></li>
+                            <li><img src={star_5} className="stars"></img></li>
                             <li className="title1">혼자 편하게 책 읽기 정말 편하....</li>
                             <li className="title2">너무 푹신하고 다리 올릴 수 있게 조절도 되면서 소리도 조용해서 좋네요 편히 쉴 수 있으니 다들 추천이용~~</li>
                         </ul>
@@ -83,9 +91,9 @@ const Postscript:React.FC = () =>{
                 </SwiperSlide>          
                 <SwiperSlide>
                     <div className="review_card">
-                        <img src="/img/review3.jpg" className="max-w-full h-auto brightness-75"></img>
+                        <img src={review3} className="max-w-full h-auto brightness-75"></img>
                         <ul className="review_text">
-                            <li><img src="/img/star_5.png" className="stars"></img></li>
+                            <li><img src={star_5} className="stars"></img></li>
                             <li className="title1">색감이 예뻐서 인테리어 좋아요....</li>
                             <li className="title2">디자인 좋고 튼튼합니다 우리집 세컨의자로 딱 좋아요 자취하다보니 퇴근 후에 혼맥하기도 좋네요ㅎㅎ</li>
                         </ul>
@@ -93,9 +101,9 @@ const Postscript:React.FC = () =>{
                 </SwiperSlide>                      
                 <SwiperSlide>
                     <div className="review_card">
-                        <img src="/img/review1.jpg" className="max-w-full h-auto brightness-75"></img>
+                        <img src={review1} className="max-w-full h-auto brightness-75"></img>
                         <ul className="review_text">
-                            <li><img src="/img/star_5.png" className="stars"></img></li>
+                            <li><img src={star_5} className="stars"></img></li>
                             <li className="title1">큰평수로 이사와서 소파도 큰거....</li>
                             <li className="title2">아기들이 너무 좋아해요ㅎㅎㅎ 집 들어오자마자 소파 직행해욬ㅋ큐ㅜ 식구가 많아서 큰거 샀는데 다들 좋아해서 넘 다행이네요!</li>
                         </ul>
@@ -103,9 +111,9 @@ const Postscript:React.FC = () =>{
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="review_card">
-                        <img src="/img/review5.jpg" className="max-w-full h-auto brightness-75"></img>
+                        <img src={review5} className="max-w-full h-auto brightness-75"></img>
                         <ul className="review_text">
-                            <li><img src="/img/star_5.png" className="stars"></img></li>
+                            <li><img src={star_5} className="stars"></img></li>
                             <li className="title1">몬카사 소파 정말 최고인것같아요...</li>
                             <li className="title2">혼자 사는 집에 두기 너무 좋아요 색감도 이쁘구요! 진짜 편해서 소파에서 누워있다가 잔적도 많아요ㅋㅋㅋ 추천드립니다</li>
                         </ul>
@@ -113,9 +121,9 @@ const Postscript:React.FC = () =>{
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="review_card">
-                        <img src="/img/review6.jpg" className="max-w-full h-auto brightness-75"></img>
+                        <img src={review6} className="max-w-full h-auto brightness-75"></img>
                         <ul className="review_text">
-                            <li><img src="/img/star_5.png" className="stars"></img></li>
+                            <li><img src={star_5} className="stars"></img></li>
                             <li className="title1">친환경이라서 바로 구매했어요!!....</li>
                             <li className="title2">패브릭 소재의 소파를 좋아하는데 피부가 예민해서 가족만 쓰다가 친환경이라고 해서 구매해봤는데 가려움도 없고 너무 좋네요...</li>
                         </ul>
@@ -123,9 +131,9 @@ const Postscript:React.FC = () =>{
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="review_card">
-                        <img src="/img/review2.jpg" className="max-w-full h-auto brightness-75"></img>
+                        <img src={review2} className="max-w-full h-auto brightness-75"></img>
                         <ul className="review_text">
-                            <li><img src="/img/star_5.png" className="stars"></img></li>
+                            <li><img src={star_5} className="stars"></img></li>
                             <li className="title1">혼자 편하게 책 읽기 정말 편하....</li>
                             <li className="title2">너무 푹신하고 다리 올릴 수 있게 조절도 되면서 소리도 조용해서 좋네요 편히 쉴 수 있으니 다들 추천이용~~</li>
                         </ul>
@@ -133,9 +141,9 @@ const Postscript:React.FC = () =>{
                 </SwiperSlide>    
                 <SwiperSlide>
                     <div className="review_card">
-                        <img src="/img/review3.jpg" className="max-w-full h-auto brightness-75"></img>
+                        <img src={review3} className="max-w-full h-auto brightness-75"></img>
                         <ul className="review_text">
-                            <li><img src="/img/star_5.png" className="stars"></img></li>
+                            <li><img src={star_5} className="stars"></img></li>
                             <li className="title1">색감이 예뻐서 인테리어 좋아요....</li>
                             <li className="title2">디자인 좋고 튼튼합니다 우리집 세컨의자로 딱 좋아요 자취하다보니 퇴근 후에 혼맥하기도 좋네요ㅎㅎ</li>
                         </ul>
@@ -143,9 +151,9 @@ const Postscript:React.FC = () =>{
                 </SwiperSlide>      
                 <SwiperSlide>
                     <div className="review_card">
-                        <img src="/img/review1.jpg" className="max-w-full h-auto brightness-75"></img>
+                        <img src={review1} className="max-w-full h-auto brightness-75"></img>
                         <ul className="review_text">
-                            <li><img src="/img/star_5.png" className="stars"></img></li>
+                            <li><img src={star_5} className="stars"></img></li>
                             <li className="title1">큰평수로 이사와서 소파도 큰거....</li>
                             <li className="title2">아기들이 너무 좋아해요ㅎㅎㅎ 집 들어오자마자 소파 직행해욬ㅋ큐ㅜ 식구가 많아서 큰거 샀는데 다들 좋아해서 넘 다행이네요!</li>
                         </ul>
@@ -153,9 +161,9 @@ const Postscript:React.FC = () =>{
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="review_card">
-                        <img src="/img/review5.jpg" className="max-w-full h-auto brightness-75"></img>
+                        <img src={review5} className="max-w-full h-auto brightness-75"></img>
                         <ul className="review_text">
-                            <li><img src="/img/star_5.png" className="stars"></img></li>
+                            <li><img src={star_5} className="stars"></img></li>
                             <li className="title1">몬카사 소파 정말 최고인것같아요...</li>
                             <li className="title2">혼자 사는 집에 두기 너무 좋아요 색감도 이쁘구요! 진짜 편해서 소파에서 누워있다가 잔적도 많아요ㅋㅋㅋ 추천드립니다</li>
                         </ul>

@@ -1,6 +1,6 @@
 .background-image4{
     background-color: #F6F1EB;
-    background-image: url("/img/background4.png");
+    background-image: url("../img/background4.png");
     background-size: contain;
     width: 100vw;
     height: calc(100vw * (793/1920));

@@ -1,4 +1,6 @@
 import '../css/Sofa4.css'
+import card from '../img/card.png';
+import newballoon from '../img/newballoon.png';
 
 const Table4:React.FC = () =>{
     return(
@@ -13,7 +15,7 @@ const Table4:React.FC = () =>{
                 1000포인트 바로 적립
               </p>
             </div>
-            <img src="/img/card.png" className="card"></img>
+            <img src={card} className="card"></img>
             <div className="event">
               <p className="word1">
                 신규가입 혜택 &gt;
@@ -23,7 +25,7 @@ const Table4:React.FC = () =>{
                 10만원 즉시 할인 혜택 받기
               </p>
             </div>
-            <img src="/img/newballoon.png" className="newballoon"></img>       
+            <img src={newballoon} className="newballoon"></img>       
           </div>
         </section>           
     );

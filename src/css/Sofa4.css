@@ -1,6 +1,6 @@
 .background-image5{
     background-color: #FFFFFF;
-    background-image: url("/img/background5.png");
+    background-image: url("../img/background5.png");
     width: 100vw;
     height: calc(100vw * (819/1920));
     background-size: contain;

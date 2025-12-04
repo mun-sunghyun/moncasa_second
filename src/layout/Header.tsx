@@ -1,3 +1,5 @@
+import logo_white from '../img/logo_white.svg';
+
 // SVG 아이콘 (언어 선택 버튼)
 const GlobalIcon: React.FC = () => (
   <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[29px] h-[28px] stroke-current stroke-[1.86]">
@@ -14,7 +16,7 @@ const Header: React.FC = () => {
                 {/*로고*/}
                 {/*<div className="text-3xl font-light tracking-wide">MONCASA</div>*/}
                 <h1 className="flex items-center">
-                    <a href="#"><img src="./img/logo_white.svg" alt="MONCASA Logo" className="w-[115px] sm:w-[200px] xl:w-auto logo"/></a>
+                    <a href="#"><img src={logo_white} alt="MONCASA Logo" className="w-[115px] sm:w-[200px] xl:w-auto logo"/></a>
                 </h1>
 
             {/*오른쪽 영역*/}

@@ -7,9 +7,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useCallback } from 'react';
 
 import SwiperCore from 'swiper';
+
+import taste_icon from '../img/taste_icon.png';
 
     interface FurnitureOptions {
     [category: string]: {
@@ -220,7 +222,7 @@ const Taste:React.FC = () =>{
                         <div className="right-group">
                             <p className="title2 text-right">안녕하세요, 고객님! MONCASA의 <br/>
                                 가구 추천을 담당하는 CASA봇입니다</p>
-                            <img src="/img/taste_icon.png" className="taste_icon ml-4"/>
+                            <img src={taste_icon} className="taste_icon ml-4"/>
                         </div>
                     </div>
 

@@ -1,11 +1,13 @@
 import '../css/Main.css'
+import Holiday_Season from '../img/Holiday_Season.png';
+import star from '../img/star.png';
 
 const Main: React.FC = () =>{
     return(
         <section>
           <div className="background-image1">
-            <img src="/img/Holiday_Season.png" className="img_HolidaySeason"></img>
-            <img src="/img/star.png" className="img_star"></img>
+            <img src={Holiday_Season} className="img_HolidaySeason"></img>
+            <img src={star} className="img_star"></img>
             <div className="text-wrapper">
               <p className="title1">따듯한 겨울, 포근한 우리 집</p>
               <p className="title2">포근한 소파부터 감각적인 테이블, 따뜻한 조명까지,<br/>

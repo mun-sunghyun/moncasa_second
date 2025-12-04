@@ -1,4 +1,8 @@
 import '../css/Sofa2.css'
+import fabric1 from '../img/fabric1.png';
+import fabric2 from '../img/fabric2.png';
+import fabric3 from '../img/fabric3.png';
+import hat from '../img/hat.png';
 
 const Sofa2:React.FC = () =>{
     return(
@@ -14,7 +18,7 @@ const Sofa2:React.FC = () =>{
           </div>
           <div className="fabric-wrapper">
             <div className="fabric-card">
-              <img src="/img/fabric1.png"></img>
+              <img src={fabric1}></img>
               <p className="card-title">1. 나의 온기를 책임지는</p>
               <p className="card-desc">
                 온기를 전하는 부드러운 감촉 겨울철 차가운 가죽<br/>
@@ -23,7 +27,7 @@ const Sofa2:React.FC = () =>{
               </p>
             </div>
             <div className="fabric-card">
-              <img src="/img/fabric2.png"></img>
+              <img src={fabric2}></img>
               <p className="card-title">2. 나의 컨디션을 책임지는</p>
               <p className="card-desc">
                 깊이 앉을수록 편안한 쿠션감 인체공학적 설계로<br/>
@@ -32,8 +36,8 @@ const Sofa2:React.FC = () =>{
               </p>              
             </div>
             <div className="fabric-card santa-hat-card">
-              <img src="/img/hat.png" className="santa-hat"></img>
-              <img src="/img/fabric3.png"></img>
+              <img src={hat} className="santa-hat"></img>
+              <img src={fabric3}></img>
               <p className="card-title">3. 나의 따스함을 책임지는</p>
               <p className="card-desc">
                 취향대로 선택하는 다양한 컬러 아이보리, 그레이,<br/>

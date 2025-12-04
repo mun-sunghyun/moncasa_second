@@ -1,4 +1,8 @@
 import '../css/Sofa2.css'
+import wood1 from '../img/wood1.png';
+import wood2 from '../img/wood2.png';
+import wood3 from '../img/wood3.png';
+import hat from '../img/hat.png';
 
 const Table2:React.FC = () =>{
     return(
@@ -14,7 +18,7 @@ const Table2:React.FC = () =>{
           </div>
           <div className="fabric-wrapper">
             <div className="fabric-card">
-              <img src="/img/wood1.png"></img>
+              <img src={wood1}></img>
               <p className="card-title">1. 나의 감성을 책임지는</p>
               <p className="card-desc">
                 자연이 주는 따듯한 감성 천연 원목의 고유한 결과<br/>
@@ -23,7 +27,7 @@ const Table2:React.FC = () =>{
               </p>
             </div>
             <div className="fabric-card">
-              <img src="/img/wood2.png"></img>
+              <img src={wood2}></img>
               <p className="card-title">2. 나의 일상을 책임지는</p>
               <p className="card-desc">
                 가족의 일상을 담는 중심 공간 넓은 상판에서<br/>
@@ -32,8 +36,8 @@ const Table2:React.FC = () =>{
               </p>              
             </div>
             <div className="fabric-card santa-hat-card">
-              <img src="/img/hat.png" className="santa-hat"></img>
-              <img src="/img/wood3.png"></img>
+              <img src={hat} className="santa-hat"></img>
+              <img src={wood3}></img>
               <p className="card-title">3. 나의 품격을 책임지는</p>
               <p className="card-desc">
                 어떤 공간에도 어울리는 디자인 모던부터 내추럴<br/>

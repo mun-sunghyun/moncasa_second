@@ -1,4 +1,8 @@
 import '../css/Sofa2.css'
+import mood1 from '../img/mood1.png';
+import mood2 from '../img/mood2.png';
+import mood3 from '../img/mood3.png';
+import hat from '../img/hat.png';
 
 const Light2:React.FC = () =>{
     return(
@@ -14,7 +18,7 @@ const Light2:React.FC = () =>{
           </div>
           <div className="fabric-wrapper">
             <div className="fabric-card">
-              <img src="/img/mood1.png"></img>
+              <img src={mood1}></img>
               <p className="card-title">1. 나의 분위기를 책임지는</p>
               <p className="card-desc">
                 분위기를 바꾸는 은은한 빛 밝기 조절 기능으로<br/>
@@ -23,7 +27,7 @@ const Light2:React.FC = () =>{
               </p>
             </div>
             <div className="fabric-card">
-              <img src="/img/mood2.png"></img>
+              <img src={mood2}></img>
               <p className="card-title">2. 나의 인테리어를 책임지는</p>
               <p className="card-desc">
                 공간을 채우는 감성 디자인 심플하면서도 세련된<br/>
@@ -32,8 +36,8 @@ const Light2:React.FC = () =>{
               </p>              
             </div>
             <div className="fabric-card santa-hat-card">
-              <img src="/img/hat.png" className="santa-hat"></img>
-              <img src="/img/mood3.png"></img>
+              <img src={hat} className="santa-hat"></img>
+              <img src={mood3}></img>
               <p className="card-title">3. 나의 편리함을 책임지는</p>
               <p className="card-desc">
                 편리함을 더하는 스마트 기능 터치, 리모컨조작으로<br/>

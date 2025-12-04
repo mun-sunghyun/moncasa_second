@@ -1,5 +1,5 @@
     .background-image2{
-        background-image:url("/img/background2.png");
+        background-image:url("../img/background2.png");
         width: 100vw;
         height: 0;
         padding-top: calc(100vw * 9 / 16);
