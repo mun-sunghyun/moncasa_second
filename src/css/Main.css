@@ -35,8 +35,9 @@
 .background-image1{
     background-image:url("../img/background1.png");
     width: 100vw;
-    height: 0;
-    padding-top: 141.4%;
+    height: calc(100vw * (1877 / 1920));
+    /*padding-top: 141.4%;
+    */
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
@@ -55,43 +56,242 @@
     transform: translateX(-50%);
     background-repeat: no-repeat;
     background-position: bottom center;
+    background-size: auto;
+}
+@media (max-width: 768px) {
+    .background-image1::after{
+        background-size: 15% auto;
+        bottom: 5%;
+    }
+}
+@media (max-width: 1024px) {
+    .background-image1::after{
+        background-size: 15% auto;
+        bottom: 5%;
+    }
 }
 .img_HolidaySeason{
     position: absolute;
-    top:17%;
+    top:14%;
     left:25%;
     width: 50vw;
     height: auto;
+    animation: bounceDown 3s ease-out forwards;
+}
+@keyframes bounceDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(50px);
+  }
+  80% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .img_star{
     position: absolute;
-    top:31%;
-    left:14%;
-    transform: rotate(-2deg);
-    width: 50vw;
+    top:37%;
+    left:30%;
+    width: 40vw;
     height: auto;
+}
+.img_with_moncasa{
+    position: absolute;
+    top:52%;
+    /*left:37%;*/
+    width: 100vw;
+    height: auto;
+    fill: none; /* 글씨 내부를 채우지 않음 */
+    stroke: white; /* 글씨 색상 (이미지처럼 흰색) */
+    stroke-width: 1; /* 글씨의 두께 */
+    stroke-linecap: round; /* 펜 끝 모양을 둥글게 */
+    stroke-linejoin: round;
+}
+
+.img_with_moncasa path{
+   opacity: 0;
+    /* ***** 애니메이션 핵심 설정 ***** */
+    /* 1. 경로의 총 길이와 동일한 값으로 설정 (예시: 1000) */
+    /*stroke-dasharray: 2155.184814453125; */
+    
+    /* 2. 초기 오프셋을 총 길이와 동일하게 설정하여 선을 숨김 (예시: 1000) */
+    /*stroke-dashoffset: 2155.184814453125;*/
+    
+    /* 3. 애니메이션 적용: 5초 동안 선형(linear)으로 진행하고, 끝난 상태를 유지(forwards) */
+    /*animation: draw 2s linear forwards, fadeIn 1s forwards;*/
+}
+@keyframes draw {
+    /* 오프셋을 0으로 만들어 숨겨진 선이 나타나게 합니다. */
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.img_with_moncasa .l1 {width:3vw; height:auto;}
+.img_with_moncasa .l2 {width:2vw; height:auto;}
+.img_with_moncasa .l3 {width:2vw; height:auto;}
+.img_with_moncasa .l4 {width:3vw; height:auto;}
+.img_with_moncasa .l5 {width:3vw; height:auto;}
+.img_with_moncasa .l6 {width:2vw; height:auto;}
+.img_with_moncasa .l7 {width:2vw; height:auto;}
+.img_with_moncasa .l8 {width:2vw; height:auto;}
+.img_with_moncasa .l9 {width:2vw; height:auto;}
+.img_with_moncasa .l10 {width:1.5vw; height:auto;}
+.img_with_moncasa .l11 {width:2vw; height:auto;}
+
+.background-image1 .img_sparkle{
+    position: absolute;
+    top: 60%;
+    left : 70%;
+    width: 15vw;
+    height: auto;
+    animation: blink 4s ease-in-out infinite;
+}
+@keyframes blink {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.2; }
+    100% { opacity: 1; }
 }
 .background-image1 .text-wrapper{    
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    margin-top: -130%; /* 원하는 만큼 조절 */
-
+    margin-top: 50%; /* 원하는 만큼 조절 */
+    position:relative;
 }
 .background-image1 .title1{
     font-family: 'Cafe24Classic';
     color : #F6F1EB;
-    font-size: clamp(50px,5vw,100px);
+    font-size: 100px;
     font-weight: 400;
+    z-index: 10;
+    position:relative;
+}
+.background-image1 .title1_shadow{
+    font-family: 'Cafe24Classic';   
+    color : #0A0A0A;
+    font-size: 100px;
+    font-weight: 400;   
+    position:absolute;
+    top: 5%;
+    left:1%;
+    opacity: 0.17;
+    z-index: -1;
+    white-space: nowrap;
 }
 .background-image1 .title2{
     font-family: 'Pretendard-Medium';
-    color:#ADADAD;
-    font-size: clamp(10px,1vw,45px);
+    color:#E6E6E6                   ;
+    font-size: 45px;
     text-align: center;
     margin-top: 3%;
 }
+@media (max-width: 768px) {
+    .background-image1 .title1,
+    .background-image1 .title1_shadow
+    {
+        font-size:38px;
+    }
+    .background-image1 .title2{
+        font-size:10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .background-image1 .title1,
+    .background-image1 .title1_shadow{
+        font-size:50px;
+    }
+    .background-image1 .title2{
+        font-size:20px;
+    }    
+}
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .background-image1 .title1,
+    .background-image1 .title1_shadow{
+        font-size:70px;
+    }
+    .background-image1 .title2{
+        font-size:30px;
+    }    
+}
+.background-image1 .snow-edge {
+    position: absolute;
+    pointer-events: none;
+    z-index: 999;
+    background-image:
+        radial-gradient(2px 2px at 10% 10%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(2px 2px at 50% 20%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(3px 3px at 80% 30%, rgba(255,255,255,0.8), transparent),
+        radial-gradient(2px 2px at 30% 70%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(3px 3px at 60% 90%, rgba(255,255,255,0.8), transparent);
+    background-size: 200px 200px;
+    animation: snowfall 15s linear infinite;
+}
 
+.background-image1 .snow-top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;  /* 위쪽 높이 조절 */
+}
 
+.background-image1 .snow-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+}
 
+.background-image1 .snow-left {
+    top: 0;
+    left: 0;
+    width: 24vw;   /* 옆쪽 너비 조절 */
+    height: 100%;
+}
+
+.background-image1 .snow-right {
+    top: 0;
+    right: 0;
+    width: 24vw;
+    height: 100%;
+}
+@media (max-width: 1024px) {
+    .background-image1 .snow-left,
+    .background-image1 .snow-right {
+        width: 180px;
+    }
+    .background-image1 .snow-top,
+    .background-image1 .snow-bottom{
+        height: 180px;
+    }
+}
+@media (max-width: 600px) {
+    .background-image1 .snow-left,
+    .background-image1 .snow-right {
+        width: 130px;
+    }
+    .background-image1 .snow-top,
+    .background-image1 .snow-bottom{
+        height: 130px;
+    }
+}
+@keyframes snowfall {
+    0% {
+        background-position: 0 -200px;
+        opacity: 0.9;
+    }
+    100% {
+        background-position: 0 200px;
+        opacity: 0.9;
+    }
+}
