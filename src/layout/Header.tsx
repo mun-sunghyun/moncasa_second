@@ -1,4 +1,7 @@
-import logo_white from '../img/logo_white.svg';
+import {Link, NavLink} from "react-router-dom";
+import ribbon from '../img/ribbon.png';
+import snow_logo from '../img/snow_logo.svg';
+import '../css/Header.css';
 
 // SVG 아이콘 (언어 선택 버튼)
 const GlobalIcon: React.FC = () => (
@@ -9,33 +12,47 @@ const GlobalIcon: React.FC = () => (
   </svg>
 ); 
 
+const NAV_ITEMS = [
+    {name:"소파", path: "/sofa"},
+    {name:"테이블", path: "/table"},
+    {name:"조명", path: "/light"},
+    {name:"취향찾기", path: "/taste"},
+    {name:"리뷰", path: "/review"},
+    {name:"MONCASA", path: "/main"}
+];
 const Header: React.FC = () => {
     return(
-        <header className="bg-[#743333] text-white py-5 fixed top-0 left-0 w-full z-50">
-            <div className="w-full flex justify-between items-center px-10">
+        <header className="bg-black/10 text-white fixed top-0 left-0 w-full z-50">
+            <div className="w-full flex justify-between items-center px-4 md:px-10 flex-wrap">
                 {/*로고*/}
                 {/*<div className="text-3xl font-light tracking-wide">MONCASA</div>*/}
-                <h1 className="flex items-center">
-                    <a href="#"><img src={logo_white} alt="MONCASA Logo" className="w-[115px] sm:w-[200px] xl:w-auto logo"/></a>
-                </h1>
+                {/*<h1 className="flex items-center relative">*/}
+                <div className="snow-edge relative w-[200px] h-[50px] xl:w-[300px] xl:h-[100px] md:w-[300px] md:h-[80px] top-[25px] md:top-[0px]">
+                    <img src={ribbon} className="absolute w-[80px] top-[0px] left-[10px] z-10"></img>
+                    <Link to="/"><img src={snow_logo} alt="MONCASA Logo" 
+                                    className="absolute w-[150px] top-[30px] left-[40px] z-5
+                                                sm:w-[150px] md:w-[200px]"/>
+                    </Link>
+                </div>
 
-            {/*오른쪽 영역*/}
-                <div className="flex items-center gap-8">    
-                {/*메뉴*/}
-                <nav className="flex gap-12 text-xl">
-                    <a href="#">미니멀</a>
-                    <a href="#">친환경</a>
-                    <a href="#">프리미엄</a>
-                    <a href="#">취향찾기</a>
-                    <a href="#">리뷰</a>
-                    <a href="#"><span className="font-bold text-2xl">MONCASA</span></a>
-                </nav>
-
-                
-                    {/*<span className="font-bold text-2xl">MONCASA</span>
-                    */}
-                    <button className="flex items-center gap-2 border border-white px-6 py-2 rounded-full text-lg
-                                       hover:bg-white hover:text-[#713131] hover:border-white">
+                {/*오른쪽 영역*/}
+                <div className="flex items-center flex-wrap gap-y-2 md:gap-8">    
+                    {/*메뉴*/}
+                    <nav className="flex gap-4 md:gap-8 text-sm md:text-xl order-2 xl:order-1 md:order-1">
+                        {NAV_ITEMS.map((item) => (
+                        <NavLink key={item.name}
+                                 to={item.path}
+                                 className="px-3 py-2 sm:px-2 sm:py-3 md:px-4 md:py-2 rounded-full text-sm bg-white/40
+                                            xl:bg-transparent xl:rounded-none xl:text-xl xl:text-white
+                                            whitespace-nowrap hover:bg-white"
+                          ><span className="text-black/50 xl:text-white">
+                            {item.name}
+                            </span></NavLink>
+                          ))}
+                    </nav>
+                    <button className="flex items-center gap-2 border border-white px-3 py-2 xl:px-6 xl:py-2 rounded-full text-lg
+                                       hover:bg-white hover:text-[#713131] hover:border-white order-1 xl:order-2 md:order-2 bg-white/40 xl:bg-transparent
+                                       ml-[380px] md:ml-auto xl:ml-0">
                         <GlobalIcon/>
                         KOR
                     </button>

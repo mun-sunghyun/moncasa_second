@@ -1,4 +1,5 @@
 import React from 'react';
+import logo_white from '../img/logo_white.svg';
 
 const Footer: React.FC = () => {
     return (
@@ -10,7 +11,7 @@ const Footer: React.FC = () => {
                     <div className="flex-shrink-0 mb-8 md:mb-0">
                         {/* 이미지 파일 경로에 맞게 src를 수정하세요 */}
                         <a href="#">
-                            <img src="./img/logo_white.svg" alt="MONCASA Logo" className="w-[150px] sm:w-[200px]"/> 
+                            <img src={logo_white} alt="MONCASA Logo" className="w-[150px] sm:w-[200px]"/> 
                         </a>
                     </div>
                     

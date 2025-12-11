@@ -11,7 +11,7 @@ const Main: React.FC = () =>{
     let delay = 0;
     const speed = 200;
 
-    paths.forEach((path, i) => {
+    paths.forEach((path) => {
       const length = path.getTotalLength();
 
       // stroke-dasharray와 stroke-dashoffset 자동 설정
@@ -76,10 +76,11 @@ const Main: React.FC = () =>{
                 겨울을 완성하는 감성 가구 컬렉션
               </p>
             </div>
-            <div className="snow-edge snow-top"></div>
+            {/*<div className="snow-edge snow-top"></div>
             <div className="snow-edge snow-bottom"></div>
             <div className="snow-edge snow-left"></div>
             <div className="snow-edge snow-right"></div>
+            */}
           </div>
         </section>
     );

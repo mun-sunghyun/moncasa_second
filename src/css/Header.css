@@ -1,0 +1,23 @@
+.snow-edge {
+    pointer-events: none;
+    z-index: 999;
+    background-image:
+        radial-gradient(6px 6px at 10% 10%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(6px 6px at 50% 20%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(8px 8px at 80% 30%, rgba(255,255,255,0.8), transparent),
+        radial-gradient(6px 6px at 30% 70%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(8px 8px at 60% 90%, rgba(255,255,255,0.8), transparent);
+    background-size: 150px 100px;
+    
+    animation: snowfall 15s linear infinite;
+}
+@keyframes snowfall {
+    0% {
+        background-position: 0 -200px;
+        opacity: 1;
+    }
+    100% {
+        background-position: 0 200px;
+        opacity: 1;
+    }
+}
