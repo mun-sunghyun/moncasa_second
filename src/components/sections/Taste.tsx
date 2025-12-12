@@ -1,4 +1,4 @@
-import '../css/Taste.css'
+import '../../css/Taste.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Scrollbar } from 'swiper/modules';
 
@@ -11,7 +11,7 @@ import { useState, useRef, useCallback } from 'react';
 
 import SwiperCore from 'swiper';
 
-import taste_icon from '../img/taste_icon.png';
+import taste_icon from '/img/taste_icon.png';
 
     interface FurnitureOptions {
     [category: string]: {

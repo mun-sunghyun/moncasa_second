@@ -1,8 +1,8 @@
-import '../css/Sofa2.css'
-import wood1 from '../img/wood1.png';
-import wood2 from '../img/wood2.png';
-import wood3 from '../img/wood3.png';
-import hat from '../img/hat.png';
+import '../../css/Sofa2.css'
+import wood1 from '/img/wood1.png';
+import wood2 from '/img/wood2.png';
+import wood3 from '/img/wood3.png';
+import hat from '/img/hat.png';
 
 const Table2:React.FC = () =>{
     return(

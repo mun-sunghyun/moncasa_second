@@ -1,13 +1,13 @@
-import '../css/Sofa3.css'
-import sofa from '../img/sofa1.png';
-import sofa2 from '../img/sofa2.png';
-import sofa3 from '../img/sofa3.png';
-import sofa4 from '../img/sofa4.png';
-import dot_color from '../img/dot_color.png';
-import dot_PET from '../img/dot_PET.png';
-import dot_777255 from '../img/dot_777255.png';
-import dot_7B706A from '../img/dot_7B706A.png';
-import dot_FFFFFF from '../img/dot_FFFFFF.png';
+import '../../css/Sofa3.css'
+import sofa from '/img/sofa1.png';
+import sofa2 from '/img/sofa2.png';
+import sofa3 from '/img/sofa3.png';
+import sofa4 from '/img/sofa4.png';
+import dot_color from '/img/dot_color.png';
+import dot_PET from '/img/dot_PET.png';
+import dot_777255 from '/img/dot_777255.png';
+import dot_7B706A from '/img/dot_7B706A.png';
+import dot_FFFFFF from '/img/dot_FFFFFF.png';
 
 const Sofa3:React.FC = () =>{
     return(

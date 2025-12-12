@@ -1,7 +1,7 @@
-import '../css/Main.css'
-import Holiday_Season from '../img/Holiday_Season.png';
-import star from '../img/star.png';
-import sparkle from '../img/sparkle.png';
+import '../../css/Main.css'
+import Holiday_Season from '/img/Holiday_Season.png';
+import star from '/img/star.png';
+import sparkle from '/img/sparkle.png';
 import React, { useEffect } from 'react';
 
 const Main: React.FC = () =>{

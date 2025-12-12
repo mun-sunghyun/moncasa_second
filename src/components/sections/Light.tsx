@@ -1,6 +1,6 @@
-import '../css/Sofa.css'
-import santa from '../img/santa.png';
-import light from '../img/light.png';
+import '../../css/Sofa.css'
+import santa from '/img/santa.png';
+import light from '/img/light.png';
 
 const Light:React.FC = () =>{
     return(

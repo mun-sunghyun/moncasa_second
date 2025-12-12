@@ -1,8 +1,8 @@
-import '../css/Interior.css'
-import interior1 from '../img/interior1.jpg';
-import interior2 from '../img/interior2.jpg';
-import interior3 from '../img/interior3.jpg';
-import hat from '../img/hat.png';
+import '../../css/Interior.css'
+import interior1 from '/img/interior1.jpg';
+import interior2 from '/img/interior2.jpg';
+import interior3 from '/img/interior3.jpg';
+import hat from '/img/hat.png';
 
 const Interior:React.FC = () => {
     return(

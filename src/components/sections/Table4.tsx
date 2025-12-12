@@ -1,6 +1,6 @@
-import '../css/Sofa4.css'
-import card from '../img/card.png';
-import newballoon from '../img/newballoon.png';
+import '../../css/Sofa4.css'
+import card from '/img/card.png';
+import newballoon from '/img/newballoon.png';
 
 const Table4:React.FC = () =>{
     return(

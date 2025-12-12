@@ -1,4 +1,4 @@
-import '../css/Lineup.css'
+import '../../css/Lineup.css'
 
 const Lineup:React.FC = () =>{
     return(

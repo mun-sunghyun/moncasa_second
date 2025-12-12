@@ -1,7 +1,7 @@
 import {Link, NavLink} from "react-router-dom";
-import ribbon from '../img/ribbon.png';
-import snow_logo from '../img/snow_logo.svg';
-import '../css/Header.css';
+import ribbon from '/img/ribbon.png';
+import snow_logo from '/img/snow_logo.svg';
+import '../../css/Header.css';
 
 // SVG 아이콘 (언어 선택 버튼)
 const GlobalIcon: React.FC = () => (

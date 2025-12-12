@@ -1,6 +1,6 @@
-import '../css/Sofa.css'
-import santa from '../img/santa.png';
-import table from '../img/table.png';
+import '../../css/Sofa.css'
+import santa from '/img/santa.png';
+import table from '/img/table.png';
 
 const Table:React.FC = () =>{
     return(

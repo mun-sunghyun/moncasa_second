@@ -1,4 +1,4 @@
-import '../css/Sofa.css'
+import '../../css/Sofa.css'
 
 const Sofa:React.FC = () =>{
     return(

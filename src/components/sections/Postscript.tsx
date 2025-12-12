@@ -9,15 +9,15 @@ import 'swiper/css/navigation';
 
 import { Pagination, Navigation } from 'swiper/modules';
 
-import '../css/Postscript.css'
-import hat from '../img/hat.png';
-import review1 from '../img/review1.jpg';
-import review2 from '../img/review2.jpg';
-import review3 from '../img/review3.jpg';
-import review4 from '../img/review4.jpg';
-import review5 from '../img/review5.jpg';
-import review6 from '../img/review6.jpg';
-import star_5 from '../img/star_5.png';
+import '../../css/Postscript.css'
+import hat from '/img/hat.png';
+import review1 from '/img/review1.jpg';
+import review2 from '/img/review2.jpg';
+import review3 from '/img/review3.jpg';
+import review4 from '/img/review4.jpg';
+import review5 from '/img/review5.jpg';
+import review6 from '/img/review6.jpg';
+import star_5 from '/img/star_5.png';
 
 const Postscript:React.FC = () =>{
     return(

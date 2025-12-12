@@ -1,5 +1,5 @@
     .background-image2{
-        background-image: url("../img/sofa.png");
+        background-image: url("/img/sofa.png");
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -22,7 +22,7 @@
         background: linear-gradient(to bottom, #6d1511 0%, rgba(109, 21, 17, 0) 100%);
     }
     .text-wrapper{
-        background-image: url("../img/santa.png");
+        background-image: url("/img/santa.png");
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;

@@ -1,6 +1,6 @@
 .background-image3{
     background-color: #6D1511;
-    background-image: url("../img/background3.png");
+    background-image: url("/img/background3.png");
     background-position: center;
     background-size: cover;
 }

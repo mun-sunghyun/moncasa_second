@@ -1,6 +1,6 @@
-import '../css/Sofa4.css'
-import coin from '../img/coin.png';
-import heartballoon from '../img/heartballoon.png';
+import '../../css/Sofa4.css'
+import coin from '/img/coin.png';
+import heartballoon from '/img/heartballoon.png';
 
 const Sofa4:React.FC = () =>{
     return(

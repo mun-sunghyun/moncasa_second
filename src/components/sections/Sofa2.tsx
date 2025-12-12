@@ -1,8 +1,8 @@
-import '../css/Sofa2.css'
-import fabric1 from '../img/fabric1.png';
-import fabric2 from '../img/fabric2.png';
-import fabric3 from '../img/fabric3.png';
-import hat from '../img/hat.png';
+import '../../css/Sofa2.css'
+import fabric1 from '/img/fabric1.png';
+import fabric2 from '/img/fabric2.png';
+import fabric3 from '/img/fabric3.png';
+import hat from '/img/hat.png';
 
 const Sofa2:React.FC = () =>{
     return(
