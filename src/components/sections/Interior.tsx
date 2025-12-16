@@ -3,10 +3,12 @@ import interior1 from '/img/interior1.jpg';
 import interior2 from '/img/interior2.jpg';
 import interior3 from '/img/interior3.jpg';
 import hat from '/img/hat.png';
+import type { SofaSectionProps } from "../../types/interface";
 
-const Interior:React.FC = () => {
+
+const Interior:React.FC<SofaSectionProps> = ({cls = ""}) => {
     return(
-        <section>
+        <section className={cls}>
             <div className="section_p">
                 <ul className="flex gap-2 justify-center">
                     <li>

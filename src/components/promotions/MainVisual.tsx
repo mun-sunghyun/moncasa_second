@@ -1,49 +1,28 @@
 
 import "../../css/Sofa.css";
+import mainVisualData from "../../data/promotion/mainVisual";
+import type { MainVisualData } from "../../data/promotion/mainVisual";
 
-type Overlay = {
-  src: string;
-  alt?: string;
-  className?: string; // img_santa top-0, img_sofa bottom-0 이런거
-};
-
-export interface MainVisualData {
+interface Furniture {
+  img: string;
   title1: string;
   title2: string;
-
-  // ✅ 배경을 이미지로 바꿀 수 있게 (public/img 기준 /img/...)
-  bgImage?: string;
-
-  // ✅ 산타, 제품이미지, 장식 등 여러개 얹기 가능
-  overlays?: Overlay[];
 }
 
-interface Props {
+interface MainVisualProps {
   data: MainVisualData;
-  className?: string;
 }
 
-export default function MainVisual({ data, className = "" }: Props) {
-  const { title1, title2, bgImage, overlays = [] } = data;
-
+export default function MainVisual({ data }: MainVisualProps) {
   return (
     <section
-      className={`flex justify-center items-start relative h-[1080px] ${className}`}
-      style={bgImage ? { backgroundImage: `url(${bgImage})` } : undefined}
+      className="bg-cover bg-center bg-no-repeat flex justify-center items-start relative h-[1080px]"
+      style={{ backgroundImage: `url(${data.img})` }}
     >
-      {overlays.map((o, i) => (
-        <img
-          key={`${o.src}-${i}`}
-          src={o.src}
-          alt={o.alt ?? ""}
-          className={o.className ?? ""}
-        />
-      ))}
-
       <div className="prodMain w-full h-full">
         <div className="text-wrapper flex flex-col justify-start items-center pt-[135px] h-full">
-          <p className="title1">{title1}</p>
-          <p className="title2">{title2}</p>
+          <p className="font-cafe24 xl:text-[70px] text-[#FFFFFF]">{data.title1}</p>
+          <p className="font-pretendard xl:text-[30px] text-[#FFFFFF]">{data.title2}</p>
         </div>
       </div>
     </section>

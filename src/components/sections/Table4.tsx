@@ -2,9 +2,11 @@ import '../../css/Sofa4.css'
 import card from '/img/card.png';
 import newballoon from '/img/newballoon.png';
 
-const Table4:React.FC = () =>{
+import type { SofaSectionProps } from "../../types/interface";
+
+const Table4:React.FC<SofaSectionProps> = ({cls = ""}) =>{
     return(
-        <section className="background-image5">
+        <section className={`${cls} background-image5`}>
           <div className="photo-wrapper">
             <div className="event">
               <p className="word1">

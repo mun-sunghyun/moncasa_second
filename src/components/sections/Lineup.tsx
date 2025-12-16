@@ -1,8 +1,10 @@
 import '../../css/Lineup.css'
 
-const Lineup:React.FC = () =>{
+import type { SofaSectionProps } from "../../types/interface";
+
+const Lineup:React.FC<SofaSectionProps> = ({cls = ""}) =>{
     return(
-        <section className="lineup p-0 w-screen flex">
+        <section className={cls + " lineup p-0 w-screen flex"}>
             <div className="lineup_img1 relative">
                 <a className="title1 flex absolute">
                     <div className="text-center flex-shrink-0">

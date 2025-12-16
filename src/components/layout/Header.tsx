@@ -44,7 +44,7 @@ const Header: React.FC = () => {
                                  to={item.path}
                                  className="px-3 py-2 sm:px-2 sm:py-3 md:px-4 md:py-2 rounded-full text-sm bg-white/40
                                             xl:bg-transparent xl:rounded-none xl:text-xl xl:text-white
-                                            whitespace-nowrap hover:bg-white"
+                                            whitespace-nowrap hover:bg-white xl:hover:bg-transparent"
                           ><span className="text-black/50 xl:text-white">
                             {item.name}
                             </span></NavLink>

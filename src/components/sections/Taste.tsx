@@ -41,9 +41,10 @@ import taste_icon from '/img/taste_icon.png';
             "형태를 선택해주세요!": ["일체형", "모듈형", "리클라이너", "코너형"],
             "가격대를 선택해주세요!": ["~50만원", "50~100만원", "100~300만원", "300만원~"]
         }
-    };    
+    };  
+import type { SofaSectionProps } from "../../types/interface"; 
 
-const Taste:React.FC = () =>{
+const Taste:React.FC<SofaSectionProps> = ({cls = ""}) =>{
 
     const swiperRef = useRef<SwiperCore | null>(null);
 
@@ -122,7 +123,7 @@ const Taste:React.FC = () =>{
         const questionTitle = `Q${keyIndex + 2}`;
 
         return (
-        <SwiperSlide key={keyIndex + 1}>
+        <SwiperSlide key={keyIndex + 1} className={cls}>
             <p className ="text_sm">고객님의 취향의 가구를 인기순으로 추천해드릴게요.</p>
             <div className="flex">
                 <p className="title1">{questionTitle}</p>
@@ -215,7 +216,7 @@ const Taste:React.FC = () =>{
     ); */}   
 
     return(
-            <section id="taste">
+            <section id="taste" className={cls}>
                 <div className="taste_bg">
                     <div className="flex-container">
                         <h2 className="title1">내 취향에 꼭 맞는 가구 찾기</h2>

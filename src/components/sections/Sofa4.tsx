@@ -2,9 +2,14 @@ import '../../css/Sofa4.css'
 import coin from '/img/coin.png';
 import heartballoon from '/img/heartballoon.png';
 
-const Sofa4:React.FC = () =>{
+
+import type { SofaSectionProps } from "../../types/interface";
+
+
+
+const Sofa4:React.FC<SofaSectionProps> = ({cls = "" }) =>{
     return(
-        <section className="background-image5">
+        <section className={`${cls} background-image5`}>
           <div className="photo-wrapper">
             <div className="event">
               <p className="word1">

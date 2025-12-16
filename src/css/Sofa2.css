@@ -5,37 +5,39 @@
     background-size: cover;
 }
 
-.background-image3 .title1{
+.title1{
     font-family: 'Pretendard-Regular';
-    color:#F6F1EB;
+   
     font-size:clamp(10px,5px + 1vw,25px);
 }
-.background-image3 .title2{
+.title2{
     font-family: 'Pretendard-Bold';
     color:#F5F5F5;
     font-size: clamp(18px,12px + 3vw ,60px);
 }
 
-.background-image3 .title3{
+.title3{
     font-family: 'Pretendard-Regular';
-    color:#F6F1EB;
+    
     font-size:clamp(12px, 7px + 1vw ,25px);
 }
 
-.background-image3 .fabric-card{  
+.fabric-card{  
     background:#F6F1EB;
 }
 
-.background-image3 .fabric-wrapper .card-title{
+.card-title{
     font-family: 'Pretendard-Bold';
     color:#6D1511;
-    font-size:clamp(18px,14px + 1vw,25px);
+    {/*font-size:clamp(18px,14px + 1vw,25px);
+    */}    
 }
 
-.background-image3 .fabric-wrapper .card-desc{
+.card-desc{
     font-family: 'Pretendard-Regular';
     color:#7B706A;
-    font-size:clamp(12px,5px + 1vw,20px);
+    {/*font-size:clamp(12px,5px + 1vw,20px);
+     */}   
 }
 
-.monContainer{max-width: 1440px; width: 85%;}
+.monContainer{}

@@ -5,13 +5,13 @@
         background-repeat: no-repeat;
     }
 
-    .background-image2 .title1{
+    .title1{
         font-family: 'Cafe24Classic';
         color : #FFFFFF;
         font-size: clamp(20px,18px + 2vw,70px);
         font-weight: 400;
     }
-    .background-image2 .title2{
+    .title2{
         font-family: 'Pretendard-Regular';
         color:#FFFFFF;
         font-size: clamp(12px,10px + 1vw,45px);
