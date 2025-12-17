@@ -1,4 +1,4 @@
-import '../../css/Sofa2.css'
+import '../../css/Sofa2.scss'
 import fabric1 from '/img/fabric1.png';
 import fabric2 from '/img/fabric2.png';
 import fabric3 from '/img/fabric3.png';

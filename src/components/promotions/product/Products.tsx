@@ -1,7 +1,7 @@
 import ProductsItem from "./ProductsItem";
 import type { ProductItemData } from "./ProductsItem";
 
-import '../../../css/Sofa3.css'
+import '../../../css/Sofa3.scss'
 
 interface ProductsProps {
   data: ProductItemData[];
@@ -9,8 +9,8 @@ interface ProductsProps {
 
 const Products: React.FC<ProductsProps> = ({ data }) => {
   return (
-    <section className="background-image4">
-      <div className="sofa-wrapper">
+    <section className="background-image4 w-full">
+      <div className="sofa-wrapper flex justify-center">
         {data.map((item, idx) => (
           <ProductsItem key={idx} item={item} />
         ))}

@@ -10,14 +10,15 @@
     background-size: 150px 100px;
     
     animation: snowfall 15s linear infinite;
-}
-@keyframes snowfall {
-    0% {
-        background-position: 0 -200px;
-        opacity: 1;
-    }
-    100% {
-        background-position: 0 200px;
-        opacity: 1;
+
+    @keyframes snowfall {
+        0% {
+            background-position: 0 -200px;
+            opacity: 1;
+        }
+        100% {
+            background-position: 0 200px;
+            opacity: 1;
+        }
     }
 }

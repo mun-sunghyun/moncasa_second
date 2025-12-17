@@ -1,4 +1,4 @@
-import '../../css/Sofa.css'
+import '../../css/Sofa.scss'
 import santa from '/img/santa.png';
 import light from '/img/light.png';
 

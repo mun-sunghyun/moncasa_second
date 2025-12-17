@@ -6,3 +6,7 @@
 
 /* Tailwind의 모든 유틸리티 클래스(가장 중요)를 주입 */
 @tailwind utilities;
+
+body{
+    overflow-x:hidden;
+}

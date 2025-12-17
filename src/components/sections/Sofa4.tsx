@@ -1,4 +1,4 @@
-import '../../css/Sofa4.css'
+import '../../css/Sofa4.scss'
 import coin from '/img/coin.png';
 import heartballoon from '/img/heartballoon.png';
 

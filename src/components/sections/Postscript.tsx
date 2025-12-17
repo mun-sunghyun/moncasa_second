@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 
 import { Pagination, Navigation } from 'swiper/modules';
 
-import '../../css/Postscript.css'
+import '../../css/Postscript.scss'
 import hat from '/img/hat.png';
 import review1 from '/img/review1.jpg';
 import review2 from '/img/review2.jpg';

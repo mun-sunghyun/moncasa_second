@@ -1,4 +1,4 @@
-import '../../css/Lineup.css'
+import '../../css/Lineup.scss'
 
 import type { SofaSectionProps } from "../../types/interface";
 
@@ -23,7 +23,7 @@ const Lineup:React.FC<SofaSectionProps> = ({cls = ""}) =>{
                             정성을 다하는<br/>
                             <strong className="title4">소파케어 받으러가기</strong>
                         </div>
-                        <svg className="arrow_icon arrow_white flex-shrink-0"><use href="#arrow"></use>
+                        <svg className="arrow_icon fill-[#fff] flex-shrink-0"><use href="#arrow"></use>
                         </svg>  
                     </a>
                 </div>
@@ -33,7 +33,7 @@ const Lineup:React.FC<SofaSectionProps> = ({cls = ""}) =>{
                             내 가구에 어울리는<br/>
                             <strong className="title6">소파케어 받으러가기</strong>
                         </div>
-                        <svg className="arrow_icon arrow_black flex-shrink-0"><use href="#arrow"></use>
+                        <svg className="arrow_icon fill-[#713131] flex-shrink-0"><use href="#arrow"></use>
                         </svg> 
                     </a>
                 </div>

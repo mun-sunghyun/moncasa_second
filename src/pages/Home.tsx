@@ -54,18 +54,18 @@ export default function Home(){
         {/*<Sofa datainfo={furnitureList}></Sofa>*/}
         {/*<Sofa2></Sofa2>*/}
         {/*<Sofa3></Sofa3>*/}
-        <Sofa4 cls="hidden"></Sofa4>        
+        {/*<Sofa4></Sofa4>*/}        
         {/*<Table></Table>*/}       
         {/*<Table2></Table2>*/}      
         {/*<Table3></Table3>*/}
-        <Table4  cls="hidden"></Table4>
+        {/*<Table4></Table4>*/}
         {/*<Light></Light>*/}
         {/*<Light2></Light2>*/}
         {/*<Light3></Light3>*/}
-        <Taste  cls="hidden"></Taste>
-        <Postscript  cls="hidden"></Postscript>
-        <Interior  cls="hidden"></Interior>
-        <Lineup  cls="hidden"></Lineup>        
+        <Taste></Taste>
+        <Postscript></Postscript>
+        <Interior></Interior>
+        <Lineup></Lineup>        
         </>
     )
 }

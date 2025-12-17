@@ -1,4 +1,4 @@
-import '../../css/Sofa.css'
+import '../../css/Sofa.scss'
 
 interface funiture{			
     img:string;			

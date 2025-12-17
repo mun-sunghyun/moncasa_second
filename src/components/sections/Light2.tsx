@@ -1,4 +1,4 @@
-import '../../css/Sofa2.css'
+import '../../css/Sofa2.scss'
 import mood1 from '/img/mood1.png';
 import mood2 from '/img/mood2.png';
 import mood3 from '/img/mood3.png';

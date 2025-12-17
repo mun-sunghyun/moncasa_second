@@ -1,5 +1,5 @@
 import React from "react";
-import '../../../css/Sofa3.css'
+import '../../../css/Sofa3.scss'
 
 export interface ProductItemData {
   img: string;

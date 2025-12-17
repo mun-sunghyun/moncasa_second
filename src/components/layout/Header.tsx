@@ -1,7 +1,7 @@
 import {Link, NavLink} from "react-router-dom";
 import ribbon from '/img/ribbon.png';
 import snow_logo from '/img/snow_logo.svg';
-import '../../css/Header.css';
+import '../../css/Header.scss';
 
 // SVG 아이콘 (언어 선택 버튼)
 const GlobalIcon: React.FC = () => (
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
                                  to={item.path}
                                  className="px-3 py-2 sm:px-2 sm:py-3 md:px-4 md:py-2 rounded-full text-sm bg-white/40
                                             xl:bg-transparent xl:rounded-none xl:text-xl xl:text-white
-                                            whitespace-nowrap hover:bg-white xl:hover:bg-transparent"
+                                            whitespace-nowrap hover:bg-white xl:hover:bg-transparent font-pretendardMedium"
                           ><span className="text-black/50 xl:text-white">
                             {item.name}
                             </span></NavLink>

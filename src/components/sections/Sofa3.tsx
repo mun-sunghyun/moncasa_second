@@ -1,4 +1,4 @@
-import '../../css/Sofa3.css'
+import '../../css/Sofa3.scss'
 import sofa from '/img/sofa1.png';
 import sofa2 from '/img/sofa2.png';
 import sofa3 from '/img/sofa3.png';

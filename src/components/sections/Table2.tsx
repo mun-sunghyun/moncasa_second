@@ -1,4 +1,4 @@
-import '../../css/Sofa2.css'
+import '../../css/Sofa2.scss'
 import wood1 from '/img/wood1.png';
 import wood2 from '/img/wood2.png';
 import wood3 from '/img/wood3.png';

@@ -1,4 +1,4 @@
-import '../../css/Taste.css'
+import '../../css/Taste.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Scrollbar } from 'swiper/modules';
 

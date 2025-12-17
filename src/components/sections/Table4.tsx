@@ -1,4 +1,4 @@
-import '../../css/Sofa4.css'
+import '../../css/Sofa4.scss'
 import card from '/img/card.png';
 import newballoon from '/img/newballoon.png';
 

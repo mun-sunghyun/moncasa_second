@@ -1,4 +1,4 @@
-import '../../css/Sofa3.css'
+import '../../css/Sofa3.scss'
 import light1 from '/img/light1.png';
 import light2 from '/img/light2.png';
 import light3 from '/img/light3.png';
