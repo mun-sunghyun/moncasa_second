@@ -22,7 +22,7 @@ const NAV_ITEMS = [
 ];
 const Header: React.FC = () => {
     return(
-        <header className="bg-black/10 text-white fixed top-0 left-0 w-full z-50">
+        <header className="bg-black/10 text-white fixed top-0 left-0 w-full z-50 moncasahd">
             <div className="w-full flex justify-between items-center px-4 md:px-10 flex-wrap">
                 {/*로고*/}
                 {/*<div className="text-3xl font-light tracking-wide">MONCASA</div>*/}
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
                     <img src={ribbon} className="absolute w-[80px] top-[0px] left-[10px] z-10"></img>
                     <Link to="/"><img src={snow_logo} alt="MONCASA Logo" 
                                     className="absolute w-[150px] top-[30px] left-[40px] z-5
-                                                sm:w-[150px] md:w-[200px]"/>
+                                                sm:w-[150px] md:w-[200px] moncasalogo"/>
                     </Link>
                 </div>
 

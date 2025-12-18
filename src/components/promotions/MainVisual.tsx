@@ -1,13 +1,6 @@
 
 import "../../css/Sofa.scss";
-import mainVisualData from "../../data/promotion/mainVisual";
 import type { MainVisualData } from "../../data/promotion/mainVisual";
-
-interface Furniture {
-  img: string;
-  title1: string;
-  title2: string;
-}
 
 interface MainVisualProps {
   data: MainVisualData;

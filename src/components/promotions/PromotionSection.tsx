@@ -3,11 +3,6 @@ import Serise from "./Serise/Serise";
 import Products from "./product/Products";
 import EventBanner from "./event/EventBanner";
 
-import sofa from '/img/sofa.png';
-import table from '/img/table.png';
-import light from '/img/light.png';
-
-import mainVisualData from "../../data/promotion/mainVisual";
 import type { MainVisualData } from "../../data/promotion/mainVisual";
 
 import sofaSeriesData from "../../data/promotion/sofa";
