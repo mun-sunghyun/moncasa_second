@@ -1,7 +1,7 @@
 import MainVisual from "./MainVisual";
 import Serise from "./Serise/Serise";
 import Products from "./product/Products";
-import EventBanner from "./EventBanner";
+import EventBanner from "./event/EventBanner";
 
 import sofa from '/img/sofa.png';
 import table from '/img/table.png';
@@ -17,6 +17,10 @@ import lightSeriesData from "../../data/promotion/light";
 import sofaProductData from "../../data/promotion/productSofa";
 import tableProductData from "../../data/promotion/productTable";
 import lightProductData from "../../data/promotion/productLight";
+
+import sofaEventData from '../../data/promotion/eventSofa';
+import tableEventData from '../../data/promotion/eventTable';
+
 {/*
 interface Furniture {
   img: string;
@@ -42,6 +46,17 @@ const productDataMap = {
   light: lightProductData,
 } as const;
 
+const eventDataMap = {
+  sofa: sofaEventData,
+  table: tableEventData
+} as const;
+
+function hasEventData(
+  key: string
+): key is keyof typeof eventDataMap {
+  return key in eventDataMap;
+}
+
 export default function PromotionSection({ data }: PromotionSectionProps) { 
   return (
     <>
@@ -50,7 +65,9 @@ export default function PromotionSection({ data }: PromotionSectionProps) {
       <MainVisual data={item}></MainVisual>
       <Serise {...seriesDataMap[item.id]}></Serise>
       <Products data={productDataMap[item.id]} ></Products>
-      {/* <EventBanner ></EventBanner> */}
+      {hasEventData(item.id) && (
+        <EventBanner data={eventDataMap[item.id]}></EventBanner>
+      )}  
       </div>
     ))}
     </>
