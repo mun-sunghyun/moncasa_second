@@ -41,7 +41,7 @@ const Postscript:React.FC<SofaSectionProps> = ({cls = ""}) =>{
                     
                 </symbol>
             </svg>
-            <section>
+            <section id="review">
                 <div className="title-group flex items-center justify-between">
                     <h2 className="title">고객님들의 공간이 담긴 솔직 후기</h2>
                     <div className="icon-group flex gap-3">

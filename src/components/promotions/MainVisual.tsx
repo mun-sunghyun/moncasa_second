@@ -9,6 +9,7 @@ interface MainVisualProps {
 export default function MainVisual({ data }: MainVisualProps) {
   return (
     <section
+      id={data.id}
       className="bg-cover bg-center bg-no-repeat flex justify-center items-start relative h-[1080px] w-screen"
       style={{ backgroundImage: `url(${data.img})` }}
     >

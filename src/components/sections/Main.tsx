@@ -24,7 +24,7 @@ const Main: React.FC = () =>{
     });
   }, []);  
     return(
-        <section>
+        <section id="main">
           <div className="background-image1">
             <img src={Holiday_Season} className="img_HolidaySeason"></img>
             <img src={star} className="img_star"></img>
