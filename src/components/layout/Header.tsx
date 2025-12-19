@@ -1,4 +1,4 @@
-import {Link, NavLink, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import ribbon from '/img/ribbon.png';
 import snow_logo from '/img/snow_logo.svg';
 import '../../css/Header.scss';
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
                                     e.preventDefault();   // 🔥 새로고침 막기
                                     handleScroll(item.id);
                                  }}
-                                 className="px-3 py-2 sm:px-2 sm:py-3 md:px-4 md:py-2 rounded-full text-sm bg-white/40
+                                 className="px-3 py-2 sm:px-2 sm:py-3 md:px-4 md:py-2 rounded-full text-sm inline-flex bg-gray-100/70
                                             xl:bg-transparent xl:rounded-none xl:text-xl xl:text-white
                                             whitespace-nowrap hover:bg-white xl:hover:bg-transparent font-pretendardMedium"
                           ><span className="text-black/50 xl:text-white">
