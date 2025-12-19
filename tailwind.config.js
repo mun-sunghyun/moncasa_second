@@ -8,8 +8,12 @@ export default {
   ],
   theme: {
     extend: {
-      colors:{
-        basic : "#F6F1EB",
+      colors: {
+        basic: "var(--c-basic)",
+        text: "var(--c-text)",
+        main: "var(--c-main)",
+        sub: "var(--c-sub)",
+        white: "var(--c-white)",
       },
       fontFamily:{
         cafe24: ['Cafe24Classic', 'sans-serif'],
@@ -18,9 +22,20 @@ export default {
         pretendardSemiBold: ['Pretendard-SemiBold', 'sans-serif'],
         pretendardBold: ['Pretendard-Bold', 'sans-serif'],        
       },
-      maxWidth: {        
-        'custom': '1450px', // 원하는 최대 너비 설정
-        'wide': '1920px',      
+      maxWidth: {
+        "sm": "var(--mw-1280)",
+        "custom": "var(--mw-1450)",
+        "md": "var(--mw-1650)",
+        "wide": "var(--mw-1920)",
+      },
+      fontSize: {
+        "event-main": "var(--fs-event-main)",
+        "event-sub": "var(--fs-event-sub)",
+        "event-mid": "var(--fs-event-mid)",
+        "title-lg": "var(--fs-title-lg)",
+        "title-md": "var(--fs-title-md)",
+        "body-md": "var(--fs-body-md)",
+        "body-sm": "var(--fs-body-sm)",
       },
     },
   },

@@ -1,32 +1,25 @@
-import React                                                                             from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-import { Pagination, Navigation } from 'swiper/modules';
+import "../../css/Postscript.scss";
+import star_5 from "/img/star_5.png";
 
-import '../../css/Postscript.scss'
 import hat from '/img/hat.png';
-import review1 from '/img/review1.jpg';
-import review2 from '/img/review2.jpg';
-import review3 from '/img/review3.jpg';
-import review4 from '/img/review4.jpg';
-import review5 from '/img/review5.jpg';
-import review6 from '/img/review6.jpg';
-import star_5 from '/img/star_5.png';
+
+import ReviewCard from "../ui/ReviewCard";
+import { REVIEWS } from "../../data/reviews";
 
 import type { SofaSectionProps } from "../../types/interface"; 
 
-const Postscript:React.FC<SofaSectionProps> = ({cls = ""}) =>{
-    return(
-        <div className={cls}>
-            <svg xmlns="http://www.w3.org/2000/svg" style={{ display: 'none' }}>
-
-                {/*연필 아이콘*/}
+const Postscript: React.FC<SofaSectionProps> = ({ cls = "" }) => {
+  return (
+    <div className={cls + 'mt-20 py-4 lg:py-14 lg:mt-10'}>
+        <svg xmlns="http://www.w3.org/2000/svg" style={{ display: 'none' }}>
                 <symbol id="icon-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M23.6895 5.92216L18.4524 0.686218C18.0128 0.246833 17.4168 0 16.7953 0C16.1738 0 15.5778 0.246833 15.1383 0.686218L0.686727 15.1366C0.468345 15.3537 0.295199 15.6119 0.177321 15.8963C0.0594426 16.1807 -0.000825208 16.4857 8.53352e-06 16.7936V22.0308C8.53352e-06 22.6524 0.246939 23.2485 0.686477 23.688C1.12602 24.1276 1.72216 24.3745 2.34376 24.3745H22.0313C22.4042 24.3745 22.7619 24.2263 23.0256 23.9626C23.2894 23.6989 23.4375 23.3412 23.4375 22.9683C23.4375 22.5953 23.2894 22.2376 23.0256 21.9739C22.7619 21.7102 22.4042 21.562 22.0313 21.562H11.3672L23.6895 9.23739C23.9072 9.01974 24.0799 8.76133 24.1978 8.47691C24.3156 8.19249 24.3763 7.88764 24.3763 7.57977C24.3763 7.27191 24.3156 6.96706 24.1978 6.68264C24.0799 6.39822 23.9072 6.13981 23.6895 5.92216ZM7.38282 21.562H2.81251V16.9917L12.6563 7.14794L17.2266 11.7183L7.38282 21.562ZM19.2188 9.72606L14.6484 5.15575L16.7977 3.00653L21.368 7.57684L19.2188 9.72606Z" fill="#713131"/>
@@ -41,10 +34,10 @@ const Postscript:React.FC<SofaSectionProps> = ({cls = ""}) =>{
                     
                 </symbol>
             </svg>
-            <section id="review">
-                <div className="title-group flex items-center justify-between">
-                    <h2 className="title">고객님들의 공간이 담긴 솔직 후기</h2>
-                    <div className="icon-group flex gap-3">
+                <div className="title-group flex items-center justify-between max-w-md mx-auto px-4 lg:px-0">
+                    <h2 className="font-pretendardBold text-title-lg">고객님들의 공간이 담긴 솔직 후기</h2>
+                    {/* 데스크탑 */}
+                    <div className="hidden lg:flex icon-group review_btn gap-3">
                         <button className="option-btn">
                             <svg className="icons"><use href="#icon-pencil"></use></svg>
                             후기작성하기
@@ -56,124 +49,48 @@ const Postscript:React.FC<SofaSectionProps> = ({cls = ""}) =>{
                         </button>
                         <img src={hat} className="santa-hat2"></img>
                     </div>
+                    {/* 모바일 */}
+                    <div className="lg:hidden icon-group review_btn flex">
+                        <button className="option-btn">
+                            <svg className="icons"><use href="#icon-pencil"></use></svg>
+                        </button>
+                        <button className="option-btn">
+                            <svg className="icons"><use href="#icon-instagram"></use></svg>
+                        </button>
+                    </div>
                 </div>
                 <div className="background flex justify-center items-center">
                     <p className="title1">포토 리뷰 이벤트로 <strong>사은품 증정</strong> 기회 놓치지 마세요!</p>
                 </div>
-                <Swiper
-                    pagination={{
-                    type: 'progressbar',
-                    }}
-                    navigation={false}
-                    modules={[Pagination, Navigation]}
-                    className="mySwiper"
-                    slidesPerView={4.4}
-                    spaceBetween={20}
-                    loop={true}
-                >
-                    <SwiperSlide>
-                        <div className="review_card">
-                            <img src={review4} className="max-w-full h-auto brightness-75"></img>
-                            <ul className="review_text">
-                                <li><img src={star_5} className="stars"></img></li>
-                                <li className="title1">친환경이라서 바로 구매했어요!!....</li>
-                                <li className="title2">패브릭 소재의 소파를 좋아하는데 피부가 예민해서 가족만 쓰다가 친환경이라고 해서 구매해봤는데 가려움도 없고 너무 좋네요...</li>
-                            </ul>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="review_card">
-                            <img src={review2} className="max-w-full h-auto brightness-75"></img>
-                            <ul className="review_text">
-                                <li><img src={star_5} className="stars"></img></li>
-                                <li className="title1">혼자 편하게 책 읽기 정말 편하....</li>
-                                <li className="title2">너무 푹신하고 다리 올릴 수 있게 조절도 되면서 소리도 조용해서 좋네요 편히 쉴 수 있으니 다들 추천이용~~</li>
-                            </ul>
-                        </div>
-                    </SwiperSlide>          
-                    <SwiperSlide>
-                        <div className="review_card">
-                            <img src={review3} className="max-w-full h-auto brightness-75"></img>
-                            <ul className="review_text">
-                                <li><img src={star_5} className="stars"></img></li>
-                                <li className="title1">색감이 예뻐서 인테리어 좋아요....</li>
-                                <li className="title2">디자인 좋고 튼튼합니다 우리집 세컨의자로 딱 좋아요 자취하다보니 퇴근 후에 혼맥하기도 좋네요ㅎㅎ</li>
-                            </ul>
-                        </div>
-                    </SwiperSlide>                      
-                    <SwiperSlide>
-                        <div className="review_card">
-                            <img src={review1} className="max-w-full h-auto brightness-75"></img>
-                            <ul className="review_text">
-                                <li><img src={star_5} className="stars"></img></li>
-                                <li className="title1">큰평수로 이사와서 소파도 큰거....</li>
-                                <li className="title2">아기들이 너무 좋아해요ㅎㅎㅎ 집 들어오자마자 소파 직행해욬ㅋ큐ㅜ 식구가 많아서 큰거 샀는데 다들 좋아해서 넘 다행이네요!</li>
-                            </ul>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="review_card">
-                            <img src={review5} className="max-w-full h-auto brightness-75"></img>
-                            <ul className="review_text">
-                                <li><img src={star_5} className="stars"></img></li>
-                                <li className="title1">몬카사 소파 정말 최고인것같아요...</li>
-                                <li className="title2">혼자 사는 집에 두기 너무 좋아요 색감도 이쁘구요! 진짜 편해서 소파에서 누워있다가 잔적도 많아요ㅋㅋㅋ 추천드립니다</li>
-                            </ul>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="review_card">
-                            <img src={review6} className="max-w-full h-auto brightness-75"></img>
-                            <ul className="review_text">
-                                <li><img src={star_5} className="stars"></img></li>
-                                <li className="title1">친환경이라서 바로 구매했어요!!....</li>
-                                <li className="title2">패브릭 소재의 소파를 좋아하는데 피부가 예민해서 가족만 쓰다가 친환경이라고 해서 구매해봤는데 가려움도 없고 너무 좋네요...</li>
-                            </ul>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="review_card">
-                            <img src={review2} className="max-w-full h-auto brightness-75"></img>
-                            <ul className="review_text">
-                                <li><img src={star_5} className="stars"></img></li>
-                                <li className="title1">혼자 편하게 책 읽기 정말 편하....</li>
-                                <li className="title2">너무 푹신하고 다리 올릴 수 있게 조절도 되면서 소리도 조용해서 좋네요 편히 쉴 수 있으니 다들 추천이용~~</li>
-                            </ul>
-                        </div>
-                    </SwiperSlide>    
-                    <SwiperSlide>
-                        <div className="review_card">
-                            <img src={review3} className="max-w-full h-auto brightness-75"></img>
-                            <ul className="review_text">
-                                <li><img src={star_5} className="stars"></img></li>
-                                <li className="title1">색감이 예뻐서 인테리어 좋아요....</li>
-                                <li className="title2">디자인 좋고 튼튼합니다 우리집 세컨의자로 딱 좋아요 자취하다보니 퇴근 후에 혼맥하기도 좋네요ㅎㅎ</li>
-                            </ul>
-                        </div>
-                    </SwiperSlide>      
-                    <SwiperSlide>
-                        <div className="review_card">
-                            <img src={review1} className="max-w-full h-auto brightness-75"></img>
-                            <ul className="review_text">
-                                <li><img src={star_5} className="stars"></img></li>
-                                <li className="title1">큰평수로 이사와서 소파도 큰거....</li>
-                                <li className="title2">아기들이 너무 좋아해요ㅎㅎㅎ 집 들어오자마자 소파 직행해욬ㅋ큐ㅜ 식구가 많아서 큰거 샀는데 다들 좋아해서 넘 다행이네요!</li>
-                            </ul>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="review_card">
-                            <img src={review5} className="max-w-full h-auto brightness-75"></img>
-                            <ul className="review_text">
-                                <li><img src={star_5} className="stars"></img></li>
-                                <li className="title1">몬카사 소파 정말 최고인것같아요...</li>
-                                <li className="title2">혼자 사는 집에 두기 너무 좋아요 색감도 이쁘구요! 진짜 편해서 소파에서 누워있다가 잔적도 많아요ㅋㅋㅋ 추천드립니다</li>
-                            </ul>
-                        </div>
-                    </SwiperSlide>                                              
-                </Swiper>            
-            </section>
-        </div>
+      <div className="max-w-md mx-auto pt-2 lg:pt-4 overflow-visible ps-4 lg:ps-0">
+        <Swiper
+          pagination={{ type: "progressbar" }}
+          navigation={false}
+          modules={[Pagination, Navigation]}
+          className="mySwiper !overflow-visible"
+          slidesPerView={2.2}
+          spaceBetween={5}
+           breakpoints={{
+            768: {
+              slidesPerView: 4.1,
+              spaceBetween: 10,
+            },
+          }}
+          loop
+        >
+          {REVIEWS.map((item, idx) => (
+            <SwiperSlide key={`${item.title}-${idx}`} className="overflow-visible">
+              <ReviewCard
+                imageSrc={item.imageSrc}
+                starsSrc={star_5}
+                title={item.title}
+                desc={item.desc}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
     );
 }
 export default Postscript;

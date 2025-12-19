@@ -99,18 +99,19 @@ const Taste:React.FC<SofaSectionProps> = ({cls = ""}) =>{
     }, []);
 
     // 1단계: 메인 카테고리 렌더링
-    const renderMainCategories = () => (
-        Object.keys(FURNITURE_OPTIONS).map(cat => (
-        <button 
-            key={cat} 
-            //className="category-button" 
-            className={`category-button ${selectedCategory === cat ? 'selected' : ''}`}
+   const renderMainCategories = () => (
+    <div className="grid grid-cols-2 gap-3 lg:flex lg:flex-wrap lg:gap-4">
+        {Object.keys(FURNITURE_OPTIONS).map((cat) => (
+        <button
+            key={cat}
+            className={`category-button ${selectedCategory === cat ? "selected" : ""} w-full lg:w-auto`}
             onClick={() => handleCategorySelect(cat)}
         >
             {cat}
         </button>
-        ))
-    );    
+        ))}
+    </div>
+    );
 
     const isAllAnswered = selectedCategory !== null && currentKeys.length > 0 && Object.keys(selectedAnswers).length === currentKeys.length;
 
@@ -125,22 +126,24 @@ const Taste:React.FC<SofaSectionProps> = ({cls = ""}) =>{
         return (
         <SwiperSlide key={keyIndex + 1} className={cls}>
             <p className ="text_sm">고객님의 취향의 가구를 인기순으로 추천해드릴게요.</p>
-            <div className="flex">
+            <div className="flex items-center">
                 <p className="title1">{questionTitle}</p>
                 <strong className="title2">
                 {key}
                 </strong>
             </div>
             <div className="dynamic-area">
-            {options.map(opt => (
-                <button
-                key={opt}
-                className={`option-button ${selectedAnswers[key] === opt ? 'selected' : ''}`}
-                onClick={() => handleOptionSelect(key, opt)}
-                >
-                {opt}
-                </button>
-            ))}
+                <div className="grid grid-cols-2 gap-x-3 gap-y-2 lg:flex lg:flex-wrap lg:gap-4">
+                    {options.map((opt) => (
+                    <button
+                        key={opt}
+                        className={`option-button ${selectedAnswers[key] === opt ? "selected" : ""} w-full h-11 lg:w-auto`}
+                        onClick={() => handleOptionSelect(key, opt)}
+                    >
+                        {opt}
+                    </button>
+                    ))}
+                </div>
 
             {/* 마지막 질문이면 버튼 표시 */}
             {keyIndex === currentKeys.length - 1 && 
@@ -193,111 +196,98 @@ const Taste:React.FC<SofaSectionProps> = ({cls = ""}) =>{
             alert('모든 항목을 선택해주세요!');
         }
     };
-    // 최종 결과 렌더링
-    {/*const renderResultSlide = () => (
-        <SwiperSlide key="result">
-        <h3>✅ 선택 결과</h3>
-        <div className="dynamic-area">
-            <pre>{JSON.stringify(selectedAnswers, null, 2)}</pre>
-        </div>
-        <div className="button-group">
-            <button 
-            className="taste_btn restart-btn text_md fw-500"
-            onClick={handleRestart}
-            >
-            처음으로 가기
-            </button>
-            <p className="bar">|</p>
-            <a href="#result-page">
-            결과보러 가기
-            </a>
-        </div>
-        </SwiperSlide>
-    ); */}   
 
     return(
-            <section id="taste" className={cls}>
-                <div className="taste_bg">
-                    <div className="flex-container">
-                        <h2 className="title1">내 취향에 꼭 맞는 가구 찾기</h2>
-                        <div className="right-group">
+            <section id="taste" className={cls + 'lg:py-6'}>
+                <div className="flex flex-col items-center justify-center w-full pt-20">
+                    <div className="max-w-custom mx-auto flex justify-between w-full">
+                        <h2 className="font-pretendardBold text-title-lg px-4 lg:px-0">내 취향에 꼭 맞는 가구 찾기</h2>
+                        <div className="right-group hidden lg:flex">
                             <p className="title2 text-right">안녕하세요, 고객님! MONCASA의 <br/>
                                 가구 추천을 담당하는 CASA봇입니다</p>
                             <img src={taste_icon} className="taste_icon ml-4"/>
                         </div>
                     </div>
-
-                    <Swiper
-                        className="swiper-container"
-                        onSwiper={(swiper) => { 
-                            swiperRef.current = swiper; 
-                            swiper.allowSlidePrev = false;
-                            swiper.allowSlideNext = false;
-                        }}
-                        onSlideChange={(swiper) => {
-                            if (swiper.activeIndex === 0) {
-                                document.querySelector('.swiper-button-prev')?.classList.add('disabled');
-                                document.querySelector('.swiper-button-next')?.classList.add('disabled');
-                            } else {
-                                document.querySelector('.swiper-button-prev')?.classList.remove('disabled');
-                                document.querySelector('.swiper-button-next')?.classList.remove('disabled');
-                            }
-                        }}
-                        speed={600}
-                        navigation={{
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                        }}
-                        scrollbar={{
-                        el: ".swiper-scrollbar",
-                        hide: false
-                        }}
-                        pagination={{
-                        el: '.swiper-pagination',
-                        type: "fraction",
-                        }}
-                        modules={[Navigation, Pagination, Scrollbar]}
-                        allowTouchMove={false} // 버튼 클릭으로만 슬라이드 이동 허용
-                    >
-                        {/* Swiper 커스텀 네비게이션 및 스크롤바/페이지네이션 */}
-                        <div className="swiper-button-prev"></div>
-                        <div className="swiper-button-next"></div>
-                        <div className="swiper-scrollbar"></div>   
-                        <div className="swiper-pagination"></div>
-                        
-                        {/* 1단계: 카테고리 선택 슬라이드 (index 0) */}
-                        <SwiperSlide key={0} className="swiper-slide">
-                            <p className ="text_sm">고객님의 취향의 가구를 인기순으로 추천해드릴게요.</p>
-                            <div className="flex">
-                                <p className="title1">Q1</p>
-                                <strong className="title2">
-                                어떤 가구를 찾으시나요?
-                                </strong>
-                            </div>
+                    <div className='max-w-md mx-auto w-full relative overflow-visible'>
+                        <div className="swiper-button-prev absolute left-0 !hidden md:!flex"></div>
+                        <div className="swiper-button-next right-0 !hidden md:!flex"></div>
+                        <div className='max-w-custom mx-auto'>
+                            <Swiper
+                                className=""
+                                onSwiper={(swiper) => { 
+                                    swiperRef.current = swiper; 
+                                    swiper.allowSlidePrev = false;
+                                    swiper.allowSlideNext = false;
+                                }}
+                                onSlideChange={(swiper) => {
+                                    if (swiper.activeIndex === 0) {
+                                        document.querySelector('.swiper-button-prev')?.classList.add('disabled');
+                                        document.querySelector('.swiper-button-next')?.classList.add('disabled');
+                                    } else {
+                                        document.querySelector('.swiper-button-prev')?.classList.remove('disabled');
+                                        document.querySelector('.swiper-button-next')?.classList.remove('disabled');
+                                    }
+                                }}
+                                speed={600}
+                                navigation={{
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                                }}
+                                scrollbar={{
+                                el: ".swiper-scrollbar",
+                                hide: false
+                                }}
+                                pagination={{
+                                el: '.swiper-pagination',
+                                type: "fraction",
+                                }}
+                                modules={[Navigation, Pagination, Scrollbar]}
+                                allowTouchMove={false} // 버튼 클릭으로만 슬라이드 이동 허용
+                            >
                             
-                            <div className="dynamic-area">
-                                {renderMainCategories()}
-                            </div>
-                        </SwiperSlide>
-                        
-                        {/* 2단계 ~ 최종 전: 질문 슬라이드 (index 1 ~ N) */}
-                        {/*{currentKeys.map((_, index) => renderQuestionSlide(index))}
-                        */}
-                        {currentKeys.length === 0 ?(
-                            <>
-                            <SwiperSlide></SwiperSlide>
-                            <SwiperSlide></SwiperSlide>
-                            <SwiperSlide></SwiperSlide>
-                            <SwiperSlide></SwiperSlide>
-                            <SwiperSlide></SwiperSlide>
-                            </>
-                        ):(currentKeys.map((_, index) => renderQuestionSlide(index)))
-                        }
-                        {/* 최종 결과 슬라이드 (마지막 인덱스) */}
-                        {/*{renderResultSlide()}*/}
-                        
+                                <div className="swiper-scrollbar"></div>   
+                                <div className="swiper-pagination"></div>
+                                
+                                {/* 1단계: 카테고리 선택 슬라이드 (index 0) */}
+                                <div className='max-w-custom mx-auto'>
+                                    <SwiperSlide key={0} className="swiper-slide">
+                                    <p className ="text_sm">고객님의 취향의 가구를 인기순으로 추천해드릴게요.</p>
+                                    <div className="flex items-center">
+                                        <p className="title1">Q1</p>
+                                        <strong className="title2">
+                                        어떤 가구를 찾으시나요?
+                                        </strong>
+                                    </div>
+                                    
+                                    <div className="dynamic-area">
+                                        {renderMainCategories()}
+                                    </div>
+                                </SwiperSlide>
+                                </div>
+                                
+                                
+                                {/* 2단계 ~ 최종 전: 질문 슬라이드 (index 1 ~ N) */}
+                                {/*{currentKeys.map((_, index) => renderQuestionSlide(index))}
+                                */}
+                                {currentKeys.length === 0 ?(
+                                    <>
+                                    <SwiperSlide></SwiperSlide>
+                                    <SwiperSlide></SwiperSlide>
+                                    <SwiperSlide></SwiperSlide>
+                                    <SwiperSlide></SwiperSlide>
+                                    <SwiperSlide></SwiperSlide>
+                                    </>
+                                ):(currentKeys.map((_, index) => renderQuestionSlide(index)))
+                                }
+                                {/* 최종 결과 슬라이드 (마지막 인덱스) */}
+                                {/*{renderResultSlide()}*/}
+                                
 
-                    </Swiper>
+                            </Swiper>
+                        </div>
+                        
+                    </div>
+                    
 
                 </div>
             </section>  

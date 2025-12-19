@@ -4,9 +4,9 @@ import type { SofaSectionProps } from "../../types/interface";
 
 const Lineup:React.FC<SofaSectionProps> = ({cls = ""}) =>{
     return(
-        <section className={cls + " lineup p-0 w-screen flex"}>
-            <div className="lineup_img1 relative">
-                <a className="title1 flex absolute">
+        <section className={cls + " lineup p-0 w-full flex"}>
+            <div className="lineup_img1 flex-1">
+                <a className="title1 flex">
                     <div className="text-center flex-shrink-0">
                     몬까사의 다양한<br/>
                     <strong className="title2">제품 라인업</strong>
@@ -16,9 +16,9 @@ const Lineup:React.FC<SofaSectionProps> = ({cls = ""}) =>{
                     </svg>                    
                 </a>
             </div>
-            <div className="w-screen h-full flex flex-col">
-                <div className="lineup_img2 relative">
-                    <a className="title3 flex absolute">
+            <div className=" flex-1 flex flex-col min-w-0">
+                <div className="lineup_img2 flex-1">
+                    <a className="title3 flex">
                         <div className="text-center flex-shrink-0">
                             정성을 다하는<br/>
                             <strong className="title4">소파케어 받으러가기</strong>
@@ -27,8 +27,8 @@ const Lineup:React.FC<SofaSectionProps> = ({cls = ""}) =>{
                         </svg>  
                     </a>
                 </div>
-                <div className="lineup_img3 relative">
-                    <a className="title5 flex absolute">
+                <div className="lineup_img3 flex-1">
+                    <a className="title5 flex">
                         <div className="text-center flex-shrink-0">
                             내 가구에 어울리는<br/>
                             <strong className="title6">소파케어 받으러가기</strong>

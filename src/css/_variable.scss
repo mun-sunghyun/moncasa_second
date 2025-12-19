@@ -1,0 +1,52 @@
+:root {
+  /* colors */
+  --c-text: #000000;
+  --c-main: #713131;
+  --c-sub: #777255;
+  --c-white: #f5f5f5;
+  --c-basic: #f6f1eb;
+
+  /* max width */
+  --mw-1280: 1280px;
+  --mw-1450: 1450px;
+  --mw-1650: 1650px;
+  --mw-1920: 1920px;
+
+  /* typography scale (mobile default) */
+  --fs-event-main: 50px;
+  --fs-event-sub: 25px;
+  --fs-event-mid: 14px;
+
+  --fs-title-lg: 18px;
+  --fs-title-md: 16px;
+  --fs-body-md: 14px;
+  --fs-body-sm: 12px;
+}
+
+/* tablet ~ small desktop */
+@media (min-width: 421px) and (max-width: 1199px) {
+  :root {
+    --fs-event-main: clamp(60px, 3vw + 60px, 80px);
+    --fs-event-sub: clamp(30px, 2vw + 30px, 50px);
+    --fs-event-mid: clamp(20px, 1vw + 20px, 25px);
+
+    --fs-title-lg: clamp(18px, 2vw + 18px, 32px);
+    --fs-title-md: clamp(16px, 1.5vw + 14px, 24px);
+    --fs-body-md: clamp(14px, 1vw + 14px, 18px);
+    --fs-body-sm: clamp(12px, 1vw + 12px, 14px);
+  }
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+  :root {
+    --fs-event-main: 100px;
+    --fs-event-sub: 50px;
+    --fs-event-mid: 28px;
+
+    --fs-title-lg: 50px;
+    --fs-title-md: 32px;
+    --fs-body-md: 24px;
+    --fs-body-sm: 18px;
+  }
+}

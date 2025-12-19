@@ -1,6 +1,6 @@
 .lineup {
-  width: 99vw;
-  height: 80vh;
+  width: 100%;
+  height: 750px;
 
   .title1 {
     color: #713131;
@@ -11,6 +11,7 @@
   }
 
   .title2 {
+    color: #713131;
     font-family: 'Pretendard-Bold';
     font-size: 40px;
   }
@@ -19,8 +20,6 @@
     color: white;
     font-family: 'Pretendardard-Regular';
     font-size: 40px;
-    top: 35%;
-    left: 30%;
   }
 
   .title4 {
@@ -32,8 +31,6 @@
     color: #222222;
     font-family: 'Pretendard-Regular';
     font-size: 40px;
-    top: 35%;
-    left: 30%;
   }
 
   .title6 {
@@ -48,13 +45,39 @@
   }
 }
 
-/* lineup background images */
+@media(max-width:420px){
+  .lineup {
+    height: 147px;
+    .title1 {
+      font-size: 12px;
+    }
+    .title2 {
+      font-size: 12px;
+    }
+    .title3 {
+      font-size: 12px;
+    }
+    .title4 {font-size: 12px;}
+    .title5 {font-size: 12px;}
+    .title6 {font-size: 12px;}
+
+    .arrow_icon {
+      width: 30px;
+      height: 30px;
+      margin-left: 5px;
+    }
+  }
+  
+}
 .lineup_img1,
 .lineup_img2,
 .lineup_img3 {
+  background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lineup_img1 {
@@ -74,3 +97,45 @@
     linear-gradient(rgba(185, 184, 184, 0.8), rgba(185, 184, 184, 0.8)),
     url("/img/lineup_picture3.jpg");
 }
+
+// .lineup_img {
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center center;
+
+//   .lineup_img1{
+//     background-image: url(../img/lineup_picture1.jpg);
+//   }
+//   .lineup_img2{
+//     background-image: url(../img/lineup_picture2.jpg);
+//   }
+//   .lineup_img3{
+//     background-image: url(../img/lineup_picture3.jpg);
+//   }
+// }
+
+// .lineup_img1, .lineup_img2, .lineup_img3{
+//     position: relative;
+//     &:before{
+//       content: "";
+//       opacity: 2;
+//       transition: 0.5s;
+//       display: block;
+//       position: absolute;
+//       left:0; right:0; top:0; bottom:0;
+//       background-color: rgba(165, 165, 165, 0.5);
+//     }
+//     &:hover:before{
+//       opacity: 1;
+//     }
+//   }
+
+//   .lineup_box{
+//     gap: 35px;
+//     @media(max-width:1200px){
+//       gap: clamp(15px, 1vw + 14px, 35px);
+//     }
+//     @media(max-width:420px){
+//       gap: 5px;
+//     }
+//   }

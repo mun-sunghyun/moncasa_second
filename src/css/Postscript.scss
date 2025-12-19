@@ -5,11 +5,10 @@
 .title {
   font-family: 'Pretendard-Bold';
   font-size: 50px;
-  margin-left: 8%;
 }
 
+
 .icon-group {
-  margin-right: 8%;
   position: relative;
 
   .icons {
@@ -17,8 +16,18 @@
     height: 20px;
   }
 }
+@media(max-width:420px){
+  .icon-group {
+  position: relative;
 
-.option-btn {
+  .icons {
+    width: 15px;
+    height: 15px;
+  }
+}
+}
+
+.review_btn .option-btn {
   border: 1px solid #713131;
   border-radius: 3rem;
   width: 200px;
@@ -41,6 +50,24 @@
     font-size: 20px;
     color: #713131;
     font-family: 'Pretendard-Medium';
+  }
+}
+
+@media(max-width:420px){
+  .background .title1 {
+    font-size: 14px;
+  }
+  .review_btn .option-btn {
+    border: 0;
+    width: 40px;
+    height: 40px;
+    font-family: 'Pretendard-SemiBold';
+    font-size: 20px;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    color: #713131;
   }
 }
 
@@ -94,12 +121,69 @@
   }
 }
 
+@media(max-width:420px){
+  .review_slide {
+    width: 200px !important;
+  }
+
+  .review_card {
+  position: relative;
+  border-radius: 30px;
+  margin-top: 5%;
+  margin-bottom: 20%;
+  height: 250px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
+
+  .review_text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    .stars {
+      max-width: 100px;
+      height: auto;
+      margin-left: 5%;
+    }
+
+    .title1 {
+      margin-left: 5%;
+      font-size: 18px;
+      padding-bottom: 1rem;
+    }
+
+    .title2 {
+      margin-left: 5%;
+      font-size: 14px;
+      width: 85%;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      margin-bottom: 10%;
+    }
+  }
+}
+}
+
 .mySwiper {
   .swiper-pagination {
     top: auto !important;
     bottom: 0 !important;
-    width: 70%;
-    left: 15%;
+    width: 100%;
+    left: 0;
   }
 
   .swiper-pagination-progressbar {
@@ -124,3 +208,4 @@
   top: -50%;
   left: 87%;
 }
+
