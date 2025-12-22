@@ -13,7 +13,7 @@ React 기반 광고 이벤트 페이지를 통해, 고객에게 친환경(ESG) �
 | 개발 | 성현, 아현 |
 | 디자인 | 예슬 |
 
-메인페이지 : https://m.site.naver.com/1Y8SD
+메인페이지 : https://m.site.naver.com/1Y8SD (node버전:20)
 
 <img src="./docs/1Y8SD.png">
 
